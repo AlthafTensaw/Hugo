@@ -1,13 +1,17 @@
 backend:
   name: git-gateway
-  branch: master # or main, depending on your repo
-media_folder: "static/images/uploads"
+  branch: master   # or "master" depending on your repo
+
+media_folder: "static/images/uploads"   # where media (images) get stored
 public_folder: "/images/uploads"
+
 collections:
-  - name: blog
-    label: Blog
-    folder: content/blog
+  - name: "blog"
+    label: "Blog"
+    folder: "content/blog"
     create: true
+    slug: "{{slug}}"
     fields:
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
