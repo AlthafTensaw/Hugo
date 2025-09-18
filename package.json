@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "netlify-cms": "^2.10.192"
+    "netlify-cms": "^2.10.192",
+    "netlify-identity-widget": "^1.9.2"
   }
 }
